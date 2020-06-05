@@ -1,0 +1,301 @@
+<nav
+  class="navbar navbar-expand-lg fixed-top navbar-transparent"
+  color-on-scroll="100"
+  id="navbar-top"
+>
+  <div class="container">
+    <div class="navbar-translate">
+      <a
+        class="navbar-brand"
+        [routerLink]="['/home']"
+        placement="bottom"
+        tooltip="Feito por Ana Carolina Balan e Julliana Samora"
+      >
+        <span> TP 2• </span>Angular
+      </a>
+      <button
+        aria-controls="navigation-index"
+        aria-label="Toggle navigation"
+        class="navbar-toggler navbar-toggler"
+        [attr.aria-expanded]="!isCollapsed"
+        (click)="isCollapsed = !isCollapsed"
+        id="navigation"
+        type="button"
+      >
+        <span class="navbar-toggler-bar bar1"> </span>
+        <span class="navbar-toggler-bar bar2"> </span>
+        <span class="navbar-toggler-bar bar3"> </span>
+      </button>
+    </div>
+    <div
+      class="navbar-collapse justify-content-end"
+      [collapse]="isCollapsed"
+      id="navigation"
+    >
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand"><a> TP 2• </a></div>
+          <div class="col-6 collapse-close text-right">
+            <button
+              aria-controls="navigation-index"
+              aria-label="Toggle navigation"
+              class="navbar-toggler"
+              [attr.aria-expanded]="!isCollapsed"
+              (click)="isCollapsed = !isCollapsed"
+              id="navigation"
+              type="button"
+            >
+              <i class="tim-icons icon-simple-remove"> </i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']"> Voltar </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="wrapper">
+  <div class="page-header">
+    <img class="dots" src="assets/img/dots.png" />
+
+    <img class="path" src="assets/img/path4.png" />
+
+    <div class="container align-items-center">
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <h1 class="profile-title text-left">Ana Carolina Balan</h1>
+          <h5 class="text-on-back">01</h5>
+          <p class="profile-description">
+            Desenvolvedora Front-end e Designer UX/UI. Busco trazer arte ao desenvolvimento
+          </p>
+          <div class="btn-wrapper profile pt-3">
+            <a
+              class="btn btn-icon btn-facebook btn-round mr-1"
+              href="https://github.com/anabalan"
+              target="_blank"
+            >
+              <i class="fab fa-github"> </i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+          <div class="card card-coin card-plain">
+            <div class="card-header">
+              <img
+                class="img-center img-fluid rounded-circle"
+                src="assets/img/ana.png"
+              />
+
+              <h4 class="title">Transactions</h4>
+            </div>
+            <div class="card-body">
+              <tabset
+                class="nav-tabs-danger justify-content-center tab-subcategories"
+              >
+                <tab heading="Wallet">
+                  <div class="table-responsive">
+                    <table class="table tablesorter" id="plain-table">
+                      <thead class="text-danger">
+                        <tr>
+                          <th class="header">COIN</th>
+                          <th class="header">AMOUNT</th>
+                          <th class="header">VALUE</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BTC</td>
+                          <td>7.342</td>
+                          <td>48,870.75 USD</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                  </div>
+                </tab>
+                <tab heading="Send">
+                  <div class="row">
+                    <label class="col-sm-3 col-form-label"> Pay to </label>
+                    <div class="col-sm-9">
+                      <div class="form-group">
+                        <input
+                          class="form-control"
+                          placeholder="e.g. 1Nasd92348hU984353hfid"
+                          type="text"
+                        />
+
+                        <span class="form-text">
+                          Please enter a valid address.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label class="col-sm-3 col-form-label"> Amount </label>
+                    <div class="col-sm-9">
+                      <div class="form-group">
+                        <input
+                          class="form-control"
+                          placeholder="1.587"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn-simple btn-danger btn-icon btn-round float-right"
+                    type="submit"
+                  >
+                    <i class="tim-icons icon-send"> </i>
+                  </button>
+                </tab>
+              </tabset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <img class="dots" src="assets/img/dots.png" />
+
+    <img class="path" src="assets/img/path4.png" />
+
+    <div class="container align-items-center">
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <h1 class="profile-title text-left">Julliana Samora</h1>
+          <h5 class="text-on-back">02</h5>
+          <p class="profile-description">
+            Web designer Jr, desenvolvedora front-end e entusiasta do design UI/UX.
+          </p>
+          <div class="btn-wrapper profile pt-3">
+            <a
+              class="btn btn-icon btn-facebook btn-round mr-1"
+              href="https://github.com/samoraju"
+              target="_blank"
+            >
+              <i class="fab fa-github"> </i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+          <div class="card card-coin card-plain">
+            <div class="card-header">
+              <img
+                class="img-center img-fluid rounded-circle"
+                src="assets/img/ju.png"
+              />
+
+              <h4 class="title">Transactions</h4>
+            </div>
+            <div class="card-body">
+              <tabset
+                class="nav-tabs-danger justify-content-center tab-subcategories"
+              >
+                <tab heading="Wallet">
+                  <div class="table-responsive">
+                    <table class="table tablesorter" id="plain-table">
+                      <thead class="text-danger">
+                        <tr>
+                          <th class="header">COIN</th>
+                          <th class="header">AMOUNT</th>
+                          <th class="header">VALUE</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BTC</td>
+                          <td>7.342</td>
+                          <td>48,870.75 USD</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </tab>
+                <tab heading="Send">
+                  <div class="row">
+                    <label class="col-sm-3 col-form-label"> Pay to </label>
+                    <div class="col-sm-9">
+                      <div class="form-group">
+                        <input
+                          class="form-control"
+                          placeholder="e.g. 1Nasd92348hU984353hfid"
+                          type="text"
+                        />
+
+                        <span class="form-text">
+                          Please enter a valid address.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label class="col-sm-3 col-form-label"> Amount </label>
+                    <div class="col-sm-9">
+                      <div class="form-group">
+                        <input
+                          class="form-control"
+                          placeholder="1.587"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn-simple btn-danger btn-icon btn-round float-right"
+                    type="submit"
+                  >
+                    <i class="tim-icons icon-send"> </i>
+                  </button>
+                </tab>
+              </tabset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"><h1 class="title">TP2•</h1></div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
+          <h3 class="title">Follow us:</h3>
+          <div class="btn-wrapper profile">
+            <a
+              class="btn btn-icon btn-neutral btn-round btn-simple mr-1"
+              href="https://twitter.com/creativetim"
+              target="_blank"
+            >
+              <i class="fab fa-twitter"> </i>
+            </a>
+            <a
+              class="btn btn-icon btn-neutral btn-round btn-simple mr-1"
+              href="https://www.facebook.com/creativetim"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-square"> </i>
+            </a>
+            <a
+              class="btn btn-icon btn-neutral btn-round btn-simple"
+              href="https://dribbble.com/creativetim"
+              target="_blank"
+            >
+              <i class="fab fa-dribbble"> </i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

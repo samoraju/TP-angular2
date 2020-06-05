@@ -1,0 +1,38 @@
+<h1>Cotação</h1>
+
+<p>
+  {{ this.currencyService.getCurrentCurrency() }}
+</p>
+
+<p>
+  Actual index: {{ this.currencyService.indexCurrency | number: "2.1-2" }}%
+
+  <span>{{
+    this.currencyService.indexCurrency > 0 ? "&#9650;" : "&#9660;"
+  }}</span>
+</p>
+
+<p *ngFor="let currency of this.currencyService.getPastCurrencies()">
+  {{ currency }}
+</p>
+
+<div class="container">
+  <div class="row">
+    <table class="table w-100">
+      <thead class="thead-dark">
+        <th>Data</th>
+        <th>Valor</th>
+      </thead>
+      <tbody class="tbody-light">
+        <tr *ngFor="let currency of this.currencyService.getOldCurrencies()">
+          <td>
+            {{ currency.date }}
+          </td>
+          <td>
+            {{ currency.currency }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
